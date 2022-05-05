@@ -59,3 +59,7 @@ a = casas["Precio"].quantile(0.25)
 b = casas["Precio"].quantile(0.75)
 rango_int = b - a
 print("El rango intercuartilico es {}".format(rango_int))
+
+#grafico
+grafico_barras = Grafico_barras(casas["Precio"], "pie")
+grafico_barras.crear_grafico()
