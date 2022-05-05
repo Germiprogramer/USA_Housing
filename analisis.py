@@ -7,12 +7,14 @@ casas = pd.read_csv("USA_Housing.csv")
 # ANALISIS DEL DATASET
 print("ANÁLISIS DEL DATASET")
 
-print("El dataset es el siguiente: ")
-print(casas)
-
 # Sustituimos el nombre de los valores a español
 casas.rename(columns = {'Avg. Area Income': 'Ingresos', 'Avg. Area House Age': 'Edad', 'Avg. Area Number of Rooms': 'Salas', 'Avg. Area Number of Bedrooms': 'Dormitorios', 'Area Population': 'Area', 'Price': 'Precio', 'Adress': 'Direccion'}, inplace = True)
 
+# LIMPIEZA DEL DATASET. Eliminamos las filas que no tengan valor
+casas = casas.dropna(subset=["Precio"])
+
+print("El dataset es el siguiente: ")
+print(casas)
 
 #Numero de filas
 filas = Filas(casas)
@@ -61,5 +63,6 @@ rango_int = b - a
 print("El rango intercuartilico es {}".format(rango_int))
 
 #grafico
-grafico_barras = Grafico_barras(casas["Precio"], "pie")
-grafico_barras.crear_grafico()
+grafico(casas["Precio"], "hist", "Precio de las casas")
+
+
