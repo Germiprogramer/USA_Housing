@@ -1,9 +1,14 @@
 from classes.estadisticos import *
+from classes.graficos import *
+import matplotlib.pyplot as plt
 
 casas = pd.read_csv("USA_Housing.csv")
 
 # ANALISIS DEL DATASET
 print("ANÁLISIS DEL DATASET")
+
+print("El dataset es el siguiente: ")
+print(casas)
 
 # Sustituimos el nombre de los valores a español
 casas.rename(columns = {'Avg. Area Income': 'Ingresos', 'Avg. Area House Age': 'Edad', 'Avg. Area Number of Rooms': 'Salas', 'Avg. Area Number of Bedrooms': 'Dormitorios', 'Area Population': 'Area', 'Price': 'Precio', 'Adress': 'Direccion'}, inplace = True)
