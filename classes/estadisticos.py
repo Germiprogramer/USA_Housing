@@ -1,4 +1,6 @@
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 class Media:
     def __init__(self, csv, columna):
@@ -113,3 +115,26 @@ class Q3:
       q3 = self.csv[self.columna].quantile(0.75)
       print("El tercer cuartil es:")
       print(q3)
+
+class Correlacion:
+    def __init__(self, dataset, lista_columnas_eliminadas):
+        self.dataset = dataset
+        self.lista_columnas_eliminadas = lista_columnas_eliminadas
+    def calculo(self):
+        filtrado=self.dataset.drop(self.lista_columnas_eliminadas,axis=1)
+
+        print("Seguidamente, se procederá a analizar la relación de las variables solicitadas.")
+        print(filtrado,"\n")
+
+        #Realizamos la correlación
+
+        print("La gráfica de la correlación entre las distintas columnas es la siguiente: ")
+        corr_df = filtrado.corr()
+        print(corr_df, "\n")
+
+        #plt.matshow(corr_df)
+        #plt.show()
+
+        plt.figure(figsize=(8, 6))
+        sns.heatmap(corr_df, annot=True)
+        plt.show()
