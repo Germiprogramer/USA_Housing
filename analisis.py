@@ -8,10 +8,11 @@ casas = pd.read_csv("USA_Housing.csv")
 print("ANÁLISIS DEL DATASET")
 
 # Sustituimos el nombre de los valores a español
-casas.rename(columns = {'Avg. Area Income': 'Ingresos', 'Avg. Area House Age': 'Edad', 'Avg. Area Number of Rooms': 'Salas', 'Avg. Area Number of Bedrooms': 'Dormitorios', 'Area Population': 'Area', 'Price': 'Precio', 'Adress': 'Direccion'}, inplace = True)
+casas.rename(columns = {'Avg. Area Income': 'Ingresos', 'Avg. Area House Age': 'Edad', 'Avg. Area Number of Rooms': 'Salas', 'Avg. Area Number of Bedrooms': 'Dormitorios', 'Area Population': 'Area', 'Price': 'Precio', 'Address': 'Direccion'}, inplace = True)
 
 # LIMPIEZA DEL DATASET. Eliminamos las filas que no tengan valor
 casas = casas.dropna(subset=["Precio"])
+
 
 print("El dataset es el siguiente: ")
 print(casas)
