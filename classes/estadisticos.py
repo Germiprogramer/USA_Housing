@@ -117,9 +117,10 @@ class Q3:
       print(q3)
 
 class Correlacion:
-    def __init__(self, dataset, lista_columnas_eliminadas):
+    def __init__(self, dataset, lista_columnas_eliminadas, nombregrafico):
         self.dataset = dataset
         self.lista_columnas_eliminadas = lista_columnas_eliminadas
+        self.nombregrafico = nombregrafico
     def calculo(self):
         filtrado=self.dataset.drop(self.lista_columnas_eliminadas,axis=1)
 
@@ -138,3 +139,4 @@ class Correlacion:
         plt.figure(figsize=(8, 6))
         sns.heatmap(corr_df, annot=True)
         plt.show()
+        plt.savefig('{}.png'.format(self.nombregrafico), bbox_inches='tight')
