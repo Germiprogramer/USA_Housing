@@ -1,8 +1,47 @@
 # USA_Housing
 
 
-# 0 - Análisis del EDA
+# 0 - Análisis del EDA.
+
 La primera parte del trabajo es realizar un análisis del dataset dado. Se ha elegido analizar el parámetro "precio", debido a que es el que tiene un mayor interés de cara a aquellos que estén interesados en las casas del archivo.
+
+El análisis realizado por el programa es el siguiente:
+
+    El numero de filas es: 5000
+    
+    El numero de columnas es: 7
+    
+    El valor máximo es: 2469065.5941747027
+    
+    El valor mínimo es: 15938.657923287848
+    
+    La media es: 1232072.654142357
+    
+    La mediana es: 1232669.3779657914
+    
+    La moda es:
+    0       1.593866e+04
+    1       3.114052e+04
+    2       8.859177e+04
+    3       1.430274e+05
+    4       1.515271e+05
+                ...
+    4995    2.318286e+06
+    4996    2.330290e+06
+    4997    2.332111e+06
+    4998    2.370231e+06
+    4999    2.469066e+06
+    Length: 5000, dtype: float64
+    
+    La desviación tipica es: 282275.20709891006
+    
+    El primer cuartil es: 997577.1350487601
+    
+    El tercer cuartil es: 1471210.2042115545
+    
+    El rango intercuartilico es 473633.0691627944   
+    
+Al no ser la desviación típica muy alta respecto a los valores, podemos considerar que la muestra está relativamente centrada.
 
 # 1 - Grafique las variables implicadas de las maneras que crea oportunas.
 
