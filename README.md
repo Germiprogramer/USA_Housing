@@ -12,7 +12,7 @@ Al ver el gráfico, podemos ver que la muestra de datos está bastante centrada,
 
 # 2 - Identifique si es necesaria una limpieza de datos y/o completar valores perdidos.
 
-Para la limpieza de datos, hemos usado la función dropna() de pandas. Al ser un dataset muy extenso, no podemos identificar a primera vista, por lo que usamos la función dropna() para eliminar aquellas filas que no tengan un valor para el precio. El código utilizado es el siguiente.
+Para la limpieza de datos, hemos usado la función dropna() de pandas. Al ser un dataset muy extenso, no podemos identificar a primera vista si hay huecos vacíos, por lo que usamos la función dropna() para eliminar aquellas filas que no tengan un valor para el precio. El código utilizado es el siguiente.
 
     casas = casas.dropna(subset=["Precio"])
 
@@ -21,6 +21,12 @@ Para la limpieza de datos, hemos usado la función dropna() de pandas. Al ser un
 Se ha realizado la correlacción entre el número de salas, dormitorios y el precio de la casa. Esto se ha hecho para intentar demostrar que cuanto más grande sea la casa, mayor será el precio. Sin embargo, tal y como se mestra en el siguiente gráfico, los resultados no han sido los esperados; siendo el coeficiente de variación de Pearson relativamente bajo.
 
 <img width="484" alt="2022-05-06 (2)" src="https://user-images.githubusercontent.com/91720991/167197984-e4512a34-746c-4b1f-8174-79c9c0c6a031.png">
+
+Por otro lado, si comparamos el precio con los ingresos, podemos darnos cuenta de que estos si están relacionados; dado que a mayor riqueza de los habitantes de la zona, más cara suele ser la casa.
+
+<img width="960" alt="2022-05-07" src="https://user-images.githubusercontent.com/91720991/167247787-28bc5c2f-a968-4cdd-9dba-e9dc07a82af1.png">
+
+
 
 # 4 - Grafique todo lo que considere oportuno.
 
