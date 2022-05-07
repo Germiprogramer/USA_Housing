@@ -12,7 +12,7 @@ def grafico(dataset, tipo_grafico, titulografico, nombregrafico):
 
   plt.savefig('{}.png'.format(nombregrafico), bbox_inches='tight')
 
-def dispersión(df, columna, nombregrafico):
+def dispersion(df, columna, nombregrafico):
     
     data=df[columna].groupby(pd.cut(df[columna], range(100,240,10))).count()
     fig, ax = plt.subplots()
