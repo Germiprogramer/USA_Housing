@@ -64,6 +64,6 @@ rango_int = b - a
 print("El rango intercuartilico es {}".format(rango_int))
 
 #grafico
-grafico(casas["Precio"], "hist", "Precio de las casas")
+grafico(casas["Precio"], "hist", "Precio de las casas", "histogramaprecio")
 
 
