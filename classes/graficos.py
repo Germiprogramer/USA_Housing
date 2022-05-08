@@ -2,15 +2,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def grafico(dataset, tipo_grafico, titulografico, nombregrafico):
-  fig, ax = plt.subplots()
+    fig, ax = plt.subplots()
  
-  dataset.plot(kind=tipo_grafico, ax = ax, color = "red")
-  ax.set_title(str(titulografico), loc = "center", fontdict = {'fontsize':14, 'fontweight':'bold', 'color':'tab:orange'})
-  ax.set_ylabel('')
- 
-  plt.show()
+    dataset.plot(kind=tipo_grafico, ax = ax, color = "red")
+    ax.set_title(str(titulografico), loc = "center", fontdict = {'fontsize':14, 'fontweight':'bold', 'color':'tab:orange'})
+    ax.set_ylabel('')
 
-  plt.savefig('{}.png'.format(nombregrafico), bbox_inches='tight')
+    plt.savefig('{}.png'.format(nombregrafico), bbox_inches='tight')
+
+    plt.show()
 
 def dispersion(df, columna, nombregrafico):
     
@@ -21,5 +21,8 @@ def dispersion(df, columna, nombregrafico):
         lista.append(i)
     plt.scatter(lista,data)
     plt.title('Diagrama de dispersión:', color= 'orange')         
-    plt.show()
+    
     fig.savefig('{}.png'.format(nombregrafico))
+
+    plt.show()
+

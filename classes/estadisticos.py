@@ -138,5 +138,6 @@ class Correlacion:
 
         plt.figure(figsize=(8, 6))
         sns.heatmap(corr_df, annot=True)
-        plt.show()
+        
         plt.savefig('{}.png'.format(self.nombregrafico), bbox_inches='tight')
+        plt.show()
