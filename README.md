@@ -73,3 +73,19 @@ Por otro lado, si comparamos el precio con los ingresos, podemos darnos cuenta d
 
 
 # 5 - (Opcional) Aplique algún tipo de clustering o reducción de dimensionalidad e intente encontrar relaciones entre los datos.
+
+Se han intentado agrupar los datos para agrupar las casas en función de las más baratas.
+
+        print("Se van a realizar una agrupación de las casas poniendo un precio límite.")
+
+        casas = pd.read_csv("USA_Housing.csv")
+
+        casas.rename(columns = {'Avg. Area Income': 'Ingresos', 'Avg. Area House Age': 'Edad', 'Avg. Area Number of Rooms': 'Salas', 'Avg. Area Number of Bedrooms': 'Dormitorios', 'Area Population': 'Area', 'Price': 'Precio', 'Address': 'Direccion'}, inplace = True)
+
+        filtro = 1232072
+
+        casas_baratas =casas['Precio']<=filtro
+        positions = np.flatnonzero(casas_baratas)
+        filtered_df = casas_baratas.iloc[positions]
+
+        print(filtered_df)
