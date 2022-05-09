@@ -1,5 +1,6 @@
 # USA_Housing
 
+El link al repositorio es el siguiente: https://github.com/Germiprogramer/USA_Housing.git
 
 # 0 - Análisis del EDA.
 
@@ -71,6 +72,7 @@ Por otro lado, si comparamos el precio con los ingresos, podemos darnos cuenta d
 
 # 4 - Grafique todo lo que considere oportuno.
 
+Ya se han expuesto los gráficos requeridos.
 
 # 5 - (Opcional) Aplique algún tipo de clustering o reducción de dimensionalidad e intente encontrar relaciones entre los datos.
 
