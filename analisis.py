@@ -11,6 +11,19 @@ print("ANÁLISIS DEL DATASET")
 casas.rename(columns = {'Avg. Area Income': 'Ingresos', 'Avg. Area House Age': 'Edad', 'Avg. Area Number of Rooms': 'Salas', 'Avg. Area Number of Bedrooms': 'Dormitorios', 'Area Population': 'Area', 'Price': 'Precio', 'Address': 'Direccion'}, inplace = True)
 
 # LIMPIEZA DEL DATASET. Eliminamos las filas que no tengan valor
+def nec_limp(dataset, columna):
+    lista = list(dataset[columna])
+    for i in range(len(lista)):
+        if lista[i] == "":
+            print("se necesita una limpieza de datos")
+            break
+        else:
+            pass
+
+nec_limp(casas, "Precio")
+
+
+
 casas = casas.dropna(subset=["Precio"])
 
 
